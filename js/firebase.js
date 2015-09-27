@@ -18,7 +18,9 @@ var messageRef = new Firebase('https://rezgrader.firebaseIO.com/');
 				});
 				event.preventDefault();
 			}
+			$("#success").show().fadeIn(1000);
 
 	}, function (errorObject) {
+		$("#error").show().fadeIn(1000);
 		console.log("The read failed: " + errorObject.code);
 	});
