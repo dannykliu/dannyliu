@@ -37,26 +37,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <script>
-  var messageRef = new Firebase('https://dannyliu.firebaseIO.com/');
-  $(function() {
-    $("#contactform").submit(function(event) {
-          messageRef.push().set({
-          name: $("#name").val(),
-          message: $("#message").val(),
-          email: $("#email").val()
-      });
-      $("#success").show().fadeIn(11000);
-      $("#success").show().fadeOut(3500);
-      event.preventDefault();
-    })
 
-  }, function (errorObject) {
-    $("#error").show().fadeIn(1000);
-    console.log("The read failed: " + errorObject.code);
-  });
-
-  </script>
   <body>
     <!-- Preloader -->
     <div id="loader-wrapper">
@@ -67,33 +48,6 @@
       </div>
     </div>
     <!-- end Preloader -->
-
-    <header>
-      <!-- Toggle Menu -->
-      <button class="toggle-btn">
-        <span class="lines"></span>
-      </button>
-      <div class="menu">
-        <ul class="nav">
-          <li class="active">
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <!-- end Toggle menu -->
-    </header>
 
     <!-- Home -->
     <section id="home" class="fill">
@@ -128,14 +82,14 @@
             <h2>About</h2>
             <p style="font-size: 16px;">Hi, I'm Danny!</p>
             <br>
-            <p>I like <b>making things</b> and <b>meeting new people</b>. Currently, I'm studying Software Engineering at the University of Waterloo, a perfect program for me because I get to continue making more cool stuff. <a href="#portfolio">Here</a> are some projects I've previously done.
+            <p>I like <b>making things</b> and <b>meeting new people</b>. Currently, I'm a first year student at Harvey Mudd College, where I am studying Computer Science and Mathematics with a concentration in Economics. I chose to study CS and Math because of my interest in Data Science, a multidisciplinary field that involves lots of computer science, statistics, linear algebra and calculus.
 </p>
          <br>
          <p>Besides learning new things, one of my all-time hobbies is adventuring into the unknown. Whether that takes place in the form of a hike (favourite!), an excursion to Antartica, or kayaking at a new location, I'm always excited to explore something new. </p>
          <br>
          <p>This exploratory nature of mine is what ties into my passion for entrepreneurship. I've attended two summer entrepreneurship programs, <a href="http://launchsummer.org/" target ="_blank">MIT Launch</a> and <a href="http://www.shad.ca/" target ="_blank">Shad Valley</a>, where I learned the importance of the beachead market, the customer persona, the minimum viable product, and so much more. At Launch, my team and I created <a href="http://github.com/dannykliu/codegeniusio" target ="_blank">Code Genius</a>, a company that helps engineers and researchers code more effectively. Anyways, that's enough text for now so I'll stop talking :)</p>
          <br>
-         <p style="font-size: 16px;">See you on the <a href="#experience">next</a> section,</p>
+         <p style="font-size: 16px;">Cheers,</p>
          <p style="font-size: 16px;">Danny</p>
 
           </div>
@@ -182,207 +136,6 @@
     </section>
     <!-- end About -->
 
-    <!-- Experience -->
-    <section id="experience">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="section-background col-xs-12 col-sm-6 col-sm-push-6" data-mh="match-experience">
-            <h2>Experience</h2>
-            <ul class="resume-box">
-              <li>
-                <div class="year" data-mh="match-exp-box-1">
-                  <div>
-                    <h4>2015-present</h4>
-                    <span>Code Genius Inc.</span>
-                  </div>
-                </div>
-                <div class="box-content" data-mh="match-exp-box-1">
-                  <h4>Chief Executive Officer</h4>
-                  <p>I founded a company that helps engineers and researchers code more effectively. We do this by connecting them with experts in their industry for specialized programming consulting. Check out our Github here <a href="http://github.com/dannykliu/codegeniusio" target ="_blank">here</a> for more information.</p>
-                </div>
-              </li>
-              <li>
-                <div class="year" data-mh="match-exp-box-2">
-                  <div>
-                    <h4>2013-2015</h4>
-                    <span>Idea Spark Club</span>
-                  </div>
-                </div>
-                <div class="box-content" data-mh="match-exp-box-2">
-                  <h4>President</h4>
-                  <p>I started Idea Spark with the vision of stretching the creative potential of budding youth by introducing them to new ideas. We did this through weekly sessions filled with engineering design projects, team-building activities, and science demonstrations targeted at elementary school students.</p>
-                </div>
-              </li>
-              <li>
-                <div class="year" data-mh="match-exp-box-3">
-                  <div>
-                    <h4>2014-2015</h4>
-                    <span>DECA</span>
-                  </div>
-                </div>
-                <div class="box-content" data-mh="match-exp-box-3">
-                  <h4>School Executive</h4>
-                  <p>I lead my high school's DECA chapter and trained members in all financial competitive events. In addition, I placed 1st in the Financial Team Decision Making Event at the provincial level in Ontario and 5th at the international level in Atlanta.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- Hire me -->
-          <div class="hire-background col-xs-12 col-sm-6 col-sm-pull-6" data-mh="match-experience">
-            <div class="black-layer">
-              <div class="middle-content">
-                <!-- Skill 1 -->
-                <div class="skill-bar">
-                  <input type="text" value="0" data-number="80" class="dial">
-                  <h4>Java</h4>
-                </div>
-                <!-- Skill 2 -->
-                <div class="skill-bar">
-                  <input type="text" value="0" data-number="70" class="dial">
-                  <h4>C/C++</h4>
-                </div>
-                <!-- Skill 3 -->
-                <div class="skill-bar">
-                  <input type="text" value="0" data-number="60" class="dial">
-                  <h4>HTML/CSS</h4>
-                </div>
-                <!-- end Skill 3 -->
-                <div class="skill-bar">
-                  <input type="text" value="0" data-number="70" class="dial">
-                  <h4>Node.js</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end Hire me -->
-        </div><!-- end row -->
-      </div><!-- end container -->
-    </section>
-    <!-- end Experience -->
-
-    <!-- Portfolio -->
-    <section id="portfolio">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="section-background col-xs-12 col-sm-6" data-mh="match-portfolio">
-            <h2>Portfolio</h2>
-            <p>My friends usually describe me as the introverted extrovert who alternates between going to social events and hiding away in his room coding. You probably know me as the extrovert always getting to know more people, but ever wonder what I do when I'm alone?               </p>
-            <br>
-            <p> When I'm not out socializing, the following projects are what I spend my time on. I chose only to showcase a few of them here, but if you would like to know more, please feel free to send me an email enquiry or ask me in person. I promise, I don't bite! </p>
-          </div>
-          <div class="portfolio-content col-xs-12 col-sm-6" data-mh="match-portfolio">
-            <div id="portfolioSlider" class="owl-carousel">
-              <!-- 1 -->
-              <div>
-                <img src="images/cgbackground.png" alt=""><!-- image url -->
-                <div class="image-layer">
-                  <div class="image-title">
-                    <h3>Code Genius Website</h3>
-                    <a class="lightbox-popup" href="#popup-1">view detail</a>
-                  </div>
-                </div>
-                <!-- popup content -->
-                <div id="popup-1" class="mfp-hide popup-portfolio">
-                  <img src="images/codegenius.jpg" alt=""><!-- image url -->
-                  <div class="popup-content">
-                    <h3>User/Expert Interface Screens</h3>
-                    <p>These screenshots show the peer-to-peer live code editing, file transferring, video calling, and screen sharing features of Code Genius' web service.</p>
-                  </div>
-                </div>
-                <!-- end popup content -->
-              </div>
-              <!-- 2 -->
-              <div>
-                <img src="images/pokerbackground.jpg" alt=""><!-- image url -->
-                <div class="image-layer">
-                  <div class="image-title">
-                    <h3>Texas Hold'em Poker App</h3>
-                    <a class="lightbox-popup" href="#popup-2">view detail</a>
-                  </div>
-                </div>
-                <!-- popup content -->
-                <div id="popup-2" class="mfp-hide popup-portfolio">
-                  <img src="images/pokerscreen.png" alt=""><!-- image url -->
-                  <div class="popup-content">
-                    <h3>Gameplay Screen</h3>
-                    <p>This screen shows a typical hand and all the player's actions for the turn. He can choose to Fold, Check, or Bet, and the action will then pass onto the opponent. </p>
-                  </div>
-                </div>
-                <!-- end popup content -->
-              </div>
-              <!-- end 2 -->
-              <!-- 3 -->
-              <div>
-                <img src="images/pokemonbackground.jpg" alt=""><!-- image url -->
-                <div class="image-layer">
-                  <div class="image-title">
-                    <h3>Pokemon Catching Game</h3>
-                    <a class="lightbox-popup" href="#popup-3">view detail</a>
-                  </div>
-                </div>
-                <!-- popup content -->
-                <div id="popup-3" class="mfp-hide popup-portfolio">
-                  <img src="images/pkmnscreen.png" alt=""><!-- image url -->
-                  <div class="popup-content">
-                    <h3>Gameplay Screen</h3>
-                    <p>This game is a computer application written in Java, and shows the evil Pokemon traveling towards your trainer. Avoid the Pokemon and throw Pokeballs at them!</p>
-                  </div>
-                </div>
-                <!-- end popup content -->
-              </div>
-              <!-- end 3 -->
-            </div>
-          </div>
-        </div><!-- end row -->
-      </div><!-- end container -->
-    </section>
-    <!-- end Portfolio -->
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="section-background col-xs-12 col-sm-6 col-sm-push-6" data-mh="match-contact">
-            <h2>Get In Touch</h2>
-            <ul class="info">
-              <li>
-                <i class="fa fa-map-marker"></i>
-                <span>200 Old Yonge Street</span>
-              </li>
-              <li>
-                <i class="fa fa-envelope"></i>
-                <span>dannykliu@gmail.com</span>
-              </li>
-              <li>
-                <i class="fa fa-phone"></i>
-                <span>+(647) 887 1733</span>
-              </li>
-            </ul>
-            <form id="contactform">
-              <div class="input-style">
-                <input type="text" id="name" name="name" placeholder="Name">
-              </div>
-              <div class="input-style">
-                <input type="email" id="email" name="email" placeholder="E-Mail">
-              </div>
-              <div class="text-style">
-                <textarea name="message" id="message" placeholder="Message"></textarea>
-              </div>
-              <input type="submit" id="submit" class="submit-style" name="submit" value="Send Message">
-              <div class="submit-result">
-                <p id="success">Your Message has been sent!</p>
-                <p id="error">Something went wrong, go back and try again!</p>
-              </div>
-            </form>
-          </div>
-          <div class="google-maps col-xs-12 col-sm-6 col-sm-pull-6" data-mh="match-contact">
-            <div id="map-canvas"></div>
-          </div>
-        </div><!-- end row -->
-      </div><!-- end container -->
-    </section>
-    <!-- end Contact -->
-
     <!-- Footer -->
     <footer>
       <div class="footer-background">
@@ -409,8 +162,6 @@
     <!-- end Footer -->
 
     <!-- ===== JAVASCRIPTS ===== -->
-    <!-- Firebase Database -->
-    <script src="js/firebase.js"></script>
     <!-- jQuery Library -->
     <script src="js/jquery.min.js"></script>
     <!-- Google Maps Library -->
@@ -429,3 +180,4 @@
     <script src="js/scripts.js"></script>
   </body>
 </html>
+
